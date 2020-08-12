@@ -25,6 +25,7 @@ app.use(bodyParser.json())
 
 mongoose.connect(process.env.URLDB, {
     useNewUrlParser: true,
+    useUnifiedTopology: true,
     useCreateIndex: true
 }, (err, res) => {
     if (err) throw new Error(err)
