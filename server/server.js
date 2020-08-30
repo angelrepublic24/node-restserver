@@ -2,21 +2,21 @@ require('../config/config');
 
 const express = require('express');
 const mongoose = require('mongoose');
-const path = require('path')
+const path = require('path');
 
 const app = express();
 
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 
 
 // Parse application /x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // Configuracion Global de rutas
-app.use(require('./routes/index'))
+app.use(require('./routes/index'));
 
 // parse application json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 // habilitar carpeta publica
 app.use(express.static(path.resolve(__dirname, '../public')));

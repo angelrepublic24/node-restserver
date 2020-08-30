@@ -11,7 +11,7 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 // 60 minutos
 // 24 horas
 // 30 dias
-process.env.CADUCIDAD_TOKEN = 60 * 60 * 24 * 30;
+process.env.CADUCIDAD_TOKEN = '48h';
 
 
 // ====================
@@ -26,7 +26,7 @@ let urlDB;
 if (process.env.NODE_ENV === 'dev') {
     urlDB = 'mongodb://localhost:27017/coffe'
 } else {
-    urlDB = process.env.MONGODB;
+    urlDB = 'mongodb+srv://coffe-user:almonte123456@cluster0.h9nof.mongodb.net/coffe'
 }
 process.env.URLDB = urlDB;
 
